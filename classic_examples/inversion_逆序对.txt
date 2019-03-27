@@ -1,0 +1,16 @@
+1.暴力破解
+
+2.归并排序 https://blog.csdn.net/juruo_hejiarui/article/details/80246074
+不太好总结
+merge_sort会使数组的这一段有序,这是通过tmpA实现的
+while循环部分,*pl<=*pr,什么也不做;*pl>*pr,则左侧数组的pl及之后的所有元素都大于*pr这个数.
+
+
+3.线段树 
+https://www.e-learn.cn/content/qita/999143
+mark
+https://blog.csdn.net/weixin_42264485/article/details/87305294
+没看懂 
+
+4.树状数组
+mark
