@@ -32,9 +32,10 @@ tree.f等价于就是down函数的前4行,即左右孩子.f+=tree.f,左右孩子
 1.[1]中末尾列的题目
 mark
 2.求逆序对
-见classic_examples的inversion_逆序对
+见classic_examples的inversion_segmentTree.cpp
 */
 
+//代码见[1]
 #include<cstdio>
 using namespace std;
 int n,p,a,b,m,x,y,ans;

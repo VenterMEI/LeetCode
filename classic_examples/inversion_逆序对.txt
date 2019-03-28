@@ -2,15 +2,22 @@
 
 2.归并排序 https://blog.csdn.net/juruo_hejiarui/article/details/80246074
 不太好总结
-merge_sort会使数组的这一段有序,这是通过tmpA实现的
+merge_sort会使数组的这一段有序,这是通过tmpA实现的.
 while循环部分,*pl<=*pr,什么也不做;*pl>*pr,则左侧数组的pl及之后的所有元素都大于*pr这个数.
 
 
-3.线段树 
+3.线段树
+具体见inversion_segmentTree.cpp
+主要利用的是线段树的区间查询功能.
 https://www.e-learn.cn/content/qita/999143
-mark
 https://blog.csdn.net/weixin_42264485/article/details/87305294
-没看懂 
+进阶 逆序三元组
+去重v.erase(unique(v.begin(),v.end()),v.end());
+
 
 4.树状数组
-mark
+代码 https://blog.csdn.net/guhaiteng/article/details/52138756
+这段的离散化写的比较好,将旧数组完全转换成新数组.
+for(int i=1; i<=n; i++)a[p[i].pos]=i;//离散化 //此时的p[i]是排好序的
+线段树或树状数组求逆序数 https://blog.csdn.net/chaiwenjun000/article/details/47829375
+
