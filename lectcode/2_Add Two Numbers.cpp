@@ -1,6 +1,11 @@
 /*
-Runtime: 52 ms, faster than 16.17% of C++ online submissions for Add Two Numbers.
-Memory Usage: 19.1 MB, less than 58.14% of C++ online submissions for Add Two Numbers.
+Runtime: 24 ms, faster than 99.99% of C++ online submissions for Add Two Numbers.
+Memory Usage: 9.7 MB, less than 100.00% of C++ online submissions for Add Two Numbers.
+*/
+
+/*
+总结：
+如果不是追求极致的速度和空间，代码可以少写很多。
 */
 
 /**
@@ -14,21 +19,36 @@ Memory Usage: 19.1 MB, less than 58.14% of C++ online submissions for Add Two Nu
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode* ret = new ListNode(0) ,*ret_copy=ret;
-        int flag = 0;
-        do{
-            if(l1){
-                flag += l1->val;
-                l1 = l1->next;
+        int is_carry=0;
+        ListNode *ret_head=l1;
+        for(;l1->next && l2->next;l1=l1->next,l2=l2->next){
+            l1->val += l2->val+is_carry;
+            if(l1->val>=10){
+                l1->val%=10;
+                is_carry=1;
+            }else{
+                is_carry=0;
             }
-            if(l2) {
-                flag += l2->val;    
-                l2 = l2->next;
+        }
+        if(l2->next){
+            l1->next=l2->next;  //如果l2元素多，就把l2的元素移给l1
+        }
+        is_carry+=l2->val;    //l2和l1对齐的最后一个元素还没加
+        while(is_carry){
+            l1->val+=is_carry;
+            is_carry=0;
+            if(l1->val>=10){
+                l1->val%=10;
+                if(l1->next){
+                    is_carry=1;
+                    l1=l1->next;
+                }else{
+                    l2->next=NULL;
+                    l2->val=1;
+                    l1->next=l2;
+                }
             }
-            ret_copy->next = new ListNode(flag%10);
-            ret_copy = ret_copy->next;
-            flag /= 10;
-        }while(l1 or l2 or flag);
-        return ret->next;
+        }
+        return ret_head;
     }
 };
