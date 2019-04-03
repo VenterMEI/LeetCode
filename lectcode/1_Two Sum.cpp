@@ -19,6 +19,6 @@ public:
             }
             hash[nums[i]]=i;
         }
-        vector<int> result; return result; //多余的，但没有会在OJ中报错 warning: control reaches end of non-void function
+        vector<int> result; return result; //多余的，但没有会在OJ中报错warning: control reaches end of non-void function
     }
 };
