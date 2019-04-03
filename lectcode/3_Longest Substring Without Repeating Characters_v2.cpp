@@ -5,7 +5,6 @@
 optimized版少了一个判断。
 */
 
-
 /*
 Runtime: 36 ms, faster than 46.73% of C++ online submissions for Longest Substring Without Repeating Characters.
 Memory Usage: 11.3 MB, less than 98.54% of C++ online submissions for Longest Substring Without Repeating Characters.
