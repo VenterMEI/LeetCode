@@ -7,6 +7,7 @@ Memory Usage: 8.9 MB, less than 100.00% of C++ online submissions for Longest Su
 总结：
 subsequence 可以不连续 & substring 连续
 */
+
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
