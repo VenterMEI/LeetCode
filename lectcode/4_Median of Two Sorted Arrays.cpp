@@ -12,7 +12,7 @@ class Solution {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
         vector<int>::size_type total = nums1.size()+nums2.size(),p1=0,p2=0;
-        vector<int>::size_type count = 0,end = total%2 ? total/2+1:total/2;
+        vector<int>::size_type count = 0,end = total%2 ? total/2+1:total/2;     //等价于 end=(total+1)/2
         bool is_nums1;
         
         while(count<end){
