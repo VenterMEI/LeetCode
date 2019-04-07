@@ -46,6 +46,6 @@ public:
                 return ((is_nums1?nums1[p1-1]:nums2[p2-1]) + nums2[p2])/2.0;
             }
         }
-        return 0.0;
+        return 0.0; //不必要的代码。
     }
 };
