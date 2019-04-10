@@ -2,6 +2,7 @@
 Runtime: 76 ms, faster than 52.28% of C++ online submissions for Longest Palindromic Substring.
 Memory Usage: 13.3 MB, less than 52.53% of C++ online submissions for Longest Palindromic Substring.
 */
+
 class Solution {
 public:
     string longestPalindrome(string s) {
@@ -23,7 +24,6 @@ public:
             if(ret.length()<r-l-1){
                 ret = string(l+1,r);
             }
-            
         }
         
         //even number
