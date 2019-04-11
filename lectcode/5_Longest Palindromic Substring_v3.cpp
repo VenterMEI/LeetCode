@@ -98,3 +98,26 @@ public:
         return ret;
     }
 };
+
+/*
+不是substr的问题，因为ret更新不了多少次。
+改成不创建的话，416ms,18.8MB。所以原因仍然未知。
+*/
+class Solution {
+public:
+    string longestPalindrome(string s) {
+        vector<vector<bool>> dp(s.size(),vector<bool>(s.size(),false));
+        
+        int left=0,length=0;
+        for(int i=0;i<s.size();++i){
+            for(int j=i;j>=0;--j){
+                dp[j][i] = s[i]==s[j] && (i-j<=2 || dp[j+1][i-1]);  //i-j=0 A; i-j=1 AA; i-j=2 ABA;
+                if(dp[j][i] && length<i-j+1){
+                    left=j;
+                    length=i-j+1;
+                }
+            }
+        }
+        return s.substr(left,length);
+    }
+};
