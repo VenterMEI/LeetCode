@@ -4,6 +4,7 @@ Memory Usage: 12.5 MB, less than 54.79% of C++ online submissions for Longest Pa
 */
 
 /*
+note
 Solution —— Approach 4: Expand Around Center
 思想和Approach 4是一致的。速度上两者没什么差别，但是代码上Approach 4将奇数回文和偶数回文都调用同一个函数，简约的多。值得学习。
 */
