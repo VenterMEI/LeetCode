@@ -38,4 +38,5 @@ class Solution:
                     if comp in count and comp != j: #comp==j的情况在"组合含重复数字"处处理
                         res.append([n,j,comp])
         return res
+    
 
