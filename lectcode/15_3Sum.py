@@ -6,7 +6,7 @@ Memory Usage: 16.8 MB, less than 52.31% of Python3 online submissions for 3Sum.
 """
 itertools.combinations 产生组合.其实自己写就是两层for循环
 tuple可以计算hash值
-算法思想大概是,3数之和除了[0,0,0]之外,其它组合最多其中两数相等.
+算法思想大概是,3数之和除了[0,0,0]之外,其它组合最多其中两数相等,那么就让a,b不等,让c可能等于a或b.
 """
 
 
