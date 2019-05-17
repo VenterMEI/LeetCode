@@ -5,7 +5,7 @@ Memory Usage: 13.3 MB, less than 55.54% of Python3 online submissions for Genera
 
 """
 用动态规划计算好闭包
-思想起源于Solution Approach 3: Closure Number
+思想起源于Solution Approach 3: Closure Number。(第二个代码块)
 """
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
