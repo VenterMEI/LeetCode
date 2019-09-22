@@ -15,36 +15,36 @@ left_equal_right Leetcode的解法4
 class Solution {
 public:
     int longestValidParentheses(string s) {
-	int ret = 0;
-	int left = 0, right = 0;
-	for(int i=0;i<s.size();++i){
-		if(s[i]=='('){
-			++left;
-		}else{
-			++right;
-		}
-		if(left==right && ret<right<<1){
-			ret = right<<1;
-		}
-		if(left<right){
-			left=right=0;
-		}
-	}
+        int ret = 0;
+        int left = 0, right = 0;
+        for(int i=0;i<s.size();++i){
+            if(s[i]=='('){
+                ++left;
+            }else{
+                ++right;
+            }
+            if(left==right && ret<right<<1){
+                ret = right<<1;
+            }
+            if(left<right){
+                left=right=0;
+            }
+        }
 
-	left = 0, right = 0;
-	for(int i=s.size()-1;i>=0;--i){
-		if(s[i]=='('){
-			++left;
-		}else{
-			++right;
-		}
-		if(left==right && ret<right<<1){
-			ret = right<<1;
-		}
-		if(left>right){
-			left=right=0;
-		}
-	}
-	return ret;
+        left = 0, right = 0;
+        for(int i=s.size()-1;i>=0;--i){
+            if(s[i]=='('){
+                ++left;
+            }else{
+                ++right;
+            }
+            if(left==right && ret<right<<1){
+                ret = right<<1;
+            }
+            if(left>right){
+                left=right=0;
+            }
+        }
+        return ret;
     }
 };
